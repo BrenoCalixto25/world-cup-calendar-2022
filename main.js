@@ -1,14 +1,14 @@
-function placar ()
+function placar(player1, player2)
 {
-  alert()
+  alert (player1,player2)
 }
 
 function createGame(player1, hour, player2, placar1, placar2) {
   return `
   <li>
-    <img src="./assets/icon-${player1}.svg" alt="Bandeira do ${player1}" onclick="placar() "${player1}, ${player2}" >
+    <img src="./assets/icon-${player1}.svg" alt="Bandeira do ${player1}" onclick="placar(${player1}, ${player2})">
     <strong>${hour}</strong>
-    <img src="./assets/icon-${player2}.svg" alt="${player2}" onclick="placar()"${player2},${player1}">
+    <img src="./assets/icon-${player2}.svg" alt="${player2}" onclick="placar(${player2},${player1})"> 
   </li>
   `
 }
@@ -130,12 +130,12 @@ document.querySelector('#cards').innerHTML =
     ) +
     createCard("13/12/2022", "Terça",
     createGame('argentina', '16:00', 'croacia', 'Argentina-3', 'Croácia-0') +
-    createGame('franca', '16:00', 'marrocos', 'França-', 'Marrocos-') 
+    createGame('franca', '16:00', 'marrocos', 'França-2', 'Marrocos-0') 
     ) +
     createCard("17/12/2022", "3º lugar",
-    createGame('argentina/croacia', '12:00', 'franca/marrocos', '-', '-') 
+    createGame('croacia', '12:00', 'marrocos', 'Croácia-', 'Marrocos-') 
     ) +
     createCard("18/12/2022", "Final",
-    createGame('argentina/croacia', '12:00', 'franca/marrocos', '-', '-')
+    createGame('argentina', '12:00', 'franca', 'Argentina-', 'França-')
     )
     
