@@ -6,9 +6,9 @@ function placar(player1, player2)
 function createGame(player1, hour, player2, placar1, placar2) {
   return `
   <li>
-    <img src="./assets/icon-${player1}.svg" alt="Bandeira do ${player1}" ${placar1} onclick="placar(${player1}, ${player2})">
+    <img src="./assets/icon-${player1}.svg" alt="Bandeira do ${player1}"  onclick="placar(${player1}, ${player2}) ${placar1}, ${placar2}">
     <strong>${hour}</strong>
-    <img src="./assets/icon-${player2}.svg" alt="Bandeira do ${player2}" ${placar2} onclick="placar(${player2}, ${player1})"> 
+    <img src="./assets/icon-${player2}.svg" alt="Bandeira do ${player2}"  onclick="placar(${player2}, ${player1}) ${placar2}, ${placar1}"> 
   </li>
   `
 }
